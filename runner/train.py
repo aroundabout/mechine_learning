@@ -114,6 +114,8 @@ class Trainer(object):
         # convert class vectors to binary class matrices
         y_train = keras.utils.to_categorical(y_train, self.num_class)
         y_test = keras.utils.to_categorical(y_test, self.num_class)
+        y_train = 0.9*y_train+0.1*(1-y_train)
+        y_test = 0.9*y_test+0.1*(1-y_test)
         return (x_train, y_train), (x_test, y_test)
 
     def train(self) -> None:
@@ -210,8 +212,9 @@ def get_args():
     parser.add_argument('--mode', type=str, default='train')
     parser.add_argument('--dataset', type=str, default='CIFAR10')
     parser.add_argument('--model_name', type=str, default='deepercnn')
-    parser.add_argument('--loss', type=str, default='cross_entropy')
-    parser.add_argument('--device', type=str, default='0')
+    parser.add_argument('--loss', type=str, default='symmetrical_cross_entropy')
+    # symmetrical_cross_entropy fusion_cross_entropy cross_entropy
+    parser.add_argument('--device', type=str, default='1')
 
     return parser.parse_args()
 
