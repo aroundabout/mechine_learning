@@ -1,8 +1,8 @@
 # mechine learning homework 1
 
 >
-    name: 姚凯楠
-    number : 2231525
+    name: 
+    number : 
 >
 
 ## Preprocess
