@@ -9,6 +9,5 @@ batch_size: 512
 epochs: 200
 val_split: 0.1
 loss_type: 'custom'
-loss: "cross_entropy"
 metrics: 
   - "accuracy"

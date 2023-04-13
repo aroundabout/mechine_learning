@@ -26,7 +26,7 @@ losses.categorical_crossentropy
 class Trainer(object):
 
     def __init__(self, config: Dict, args) -> None:
-        self.loss = config['loss']
+        self.loss = args.loss
         self.metric = config['metrics']
         self.batch_size = config['batch_size']
         self.epochs = config['epochs']
