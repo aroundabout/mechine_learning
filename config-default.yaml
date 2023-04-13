@@ -6,7 +6,7 @@ input_c: 3
 num_class: 10
 
 batch_size: 512
-epochs: 100
+epochs: 200
 val_split: 0.1
 loss_type: 'custom'
 metrics: 
